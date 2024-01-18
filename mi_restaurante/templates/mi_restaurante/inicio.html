@@ -1,0 +1,79 @@
+<!-- mi_restaurante/inicio.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Barra de navegación con menú desplegable -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Restaurante</a>
+            <!-- Botón del menú para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Elementos de menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                    </li>
+                    <!-- Menú desplegable "Comida" con submenús -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownComida" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Comida
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownComida">
+                            <a class="dropdown-item" href="#">Mar</a>
+                            <a class="dropdown-item" href="#">Tierra</a>
+                            <!-- Agrega más submenús según sea necesario -->
+                        </div>
+                    </li>
+                    <!-- Menú desplegable "Bebidas" con submenús -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBebidas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bebidas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownBebidas">
+                            <!-- Submenú "Bebida Fria" con submenús -->
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownFria" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bebida Fria
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownFria">
+                                <a class="dropdown-item" href="#">Refrescos</a>
+                                <a class="dropdown-item" href="#">Con Alcohol</a>
+                            </div>
+                            <!-- Submenú "Bebida Caliente" con submenús -->
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownCaliente" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bebida Caliente
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownCaliente">
+                                <a class="dropdown-item" href="#">Cafés</a>
+                                <a class="dropdown-item" href="#">Infusiones</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Puedes agregar más elementos de menú según sea necesario -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de tu página -->
+    <div class="container mt-5">
+        <h1>Bienvenido a nuestro restaurante</h1>
+        <p>¡Descubre nuestros deliciosos platillos!</p>
+    </div>
+
+    <!-- Enlaces a Bootstrap JS y jQuery (necesarios para el funcionamiento del menú desplegable) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
